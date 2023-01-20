@@ -7,6 +7,7 @@ import {
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import NavBar from './NavBar';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path:'recipes/:id',
-    element: <h1>Hello</h1>
+    element: <><NavBar/><h1>Hello</h1></>
   }
 ]);
 

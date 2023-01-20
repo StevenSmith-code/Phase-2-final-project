@@ -8,6 +8,7 @@ function App() {
   const [data, setData] = useState([])
 
   useEffect(() =>{
+    recipes.sort(() => Math.random() - 0.5)
     setData([...data, ...recipes])
   },[])
 
