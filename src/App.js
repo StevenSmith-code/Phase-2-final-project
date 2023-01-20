@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
-
+import recipes from "./db.json"
+import NavBar from './NavBar';
+import RecipeContainer from './RecipeContainer';
 function App() {
+
+  const [data, setData] = useState([])
+
+  useEffect(() =>{
+    setData([...data, ...recipes])
+  },[])
+  
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <RecipeContainer/>
+     {/* {data.map(recipe => (
+      <li key={recipe.id}>{recipe.title}</li>
+     ))} */}
     </div>
   );
 }
