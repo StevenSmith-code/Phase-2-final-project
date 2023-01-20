@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "img": "https://e7.pngegg.com/pngimages/658/517/png-clipart-bolognese-sauce-pasta-salad-italian-cuisine-spaghetti-cooking-food-recipe-thumbnail.png",
+        "img": "https://thecozycook.com/wp-content/uploads/2019/08/Bolognese-Sauce-480x270.jpg",
         "title": "Spaghetti Bolognese",
         "ingredients": [
             "ground beef",
@@ -17,7 +17,7 @@
     {
         "id": 2,
         "title": "Fried Rice",
-        "img":"https://e7.pngegg.com/pngimages/792/124/png-clipart-fried-rice-lo-mein-biryani-fried-chicken-jollof-rice-fried-chicken-food-recipe-thumbnail.png",
+        "img":"https://www.funfoodfrolic.com/wp-content/uploads/2021/10/Fried-Rice-Blog-Thumbnail-500x375.jpg",
         "ingredients": [
             "cooked rice",
             "vegetable oil",
@@ -34,7 +34,7 @@
     {
         "id": 3,
         "title": "Pancakes",
-        "img":"https://e7.pngegg.com/pngimages/782/661/png-clipart-pancake-pancake-thumbnail.png",
+        "img":"https://thestayathomechef.com/wp-content/uploads/2019/01/Oatmeal-Pancakes-THUMBNAIL-2.jpg",
         "ingredients": [
             "all-purpose flour",
             "baking powder",
