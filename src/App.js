@@ -10,16 +10,12 @@ function App() {
   useEffect(() =>{
     setData([...data, ...recipes])
   },[])
-  
-
 
   return (
     <div className="App">
       <NavBar/>
-      <RecipeContainer/>
-     {/* {data.map(recipe => (
-      <li key={recipe.id}>{recipe.title}</li>
-     ))} */}
+      <RecipeContainer data={data}/>
+     
     </div>
   );
 }

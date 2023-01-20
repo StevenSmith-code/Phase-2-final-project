@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "img": "https://e7.pngegg.com/pngimages/658/517/png-clipart-bolognese-sauce-pasta-salad-italian-cuisine-spaghetti-cooking-food-recipe-thumbnail.png",
         "title": "Spaghetti Bolognese",
         "ingredients": [
             "ground beef",
@@ -16,6 +17,7 @@
     {
         "id": 2,
         "title": "Fried Rice",
+        "img":"https://e7.pngegg.com/pngimages/792/124/png-clipart-fried-rice-lo-mein-biryani-fried-chicken-jollof-rice-fried-chicken-food-recipe-thumbnail.png",
         "ingredients": [
             "cooked rice",
             "vegetable oil",
@@ -32,6 +34,7 @@
     {
         "id": 3,
         "title": "Pancakes",
+        "img":"https://e7.pngegg.com/pngimages/782/661/png-clipart-pancake-pancake-thumbnail.png",
         "ingredients": [
             "all-purpose flour",
             "baking powder",
