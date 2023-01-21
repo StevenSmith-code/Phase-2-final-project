@@ -8,6 +8,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import NavBar from './NavBar';
+import DetailedRecipe from "./DetailedRecipe"
 
 const router = createBrowserRouter([
   {
@@ -16,10 +17,12 @@ const router = createBrowserRouter([
   },
   {
     path:'recipes/:id',
-    element: <><NavBar/><h1>Hello</h1></>
+    element: <><NavBar/><DetailedRecipe/></>,
+    loader: async ({params}) => {
+      return fetch(`http://localhost:3000/recipes/${params.id}`)
+    }
   }
 ]);
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
