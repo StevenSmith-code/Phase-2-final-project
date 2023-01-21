@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import recipes from "./db.json"
 import NavBar from './NavBar';
 import RecipeContainer from './RecipeContainer';
 function App() {
@@ -8,8 +7,12 @@ function App() {
   const [data, setData] = useState([])
 
   useEffect(() =>{
-    recipes.sort(() => Math.random() - 0.5)
-    setData([...data, ...recipes])
+    fetch("http://localhost:3000/recipes")
+    .then(res => res.json())
+    .then(data => {
+      data.sort(() => Math.random() - 0.5)
+      setData([...data])
+    })
   },[])
 
   return (

@@ -1,4 +1,5 @@
-[
+{
+  "recipes": [
     {
         "id": 1,
         "img": "https://thecozycook.com/wp-content/uploads/2019/08/Bolognese-Sauce-480x270.jpg",
@@ -49,3 +50,5 @@
         "cooking_time": 15
     }
 ]
+
+}
