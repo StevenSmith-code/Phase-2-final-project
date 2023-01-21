@@ -1,55 +1,87 @@
 {
   "recipes": [
     {
-        "id": 1,
-        "img": "https://thecozycook.com/wp-content/uploads/2019/08/Bolognese-Sauce-480x270.jpg",
-        "title": "Spaghetti Bolognese",
-        "ingredients": [
-            "ground beef",
-            "onion",
-            "garlic",
-            "crushed tomatoes",
-            "spaghetti"
-        ],
-        "instructions": "1. In a large skillet, brown ground beef over medium heat. Drain any excess fat.\n2. Add diced onion and minced garlic to the skillet and sauté until softened.\n3. Stir in crushed tomatoes and bring to a simmer.\n4. Cook spaghetti according to package instructions.\n5. Serve spaghetti topped with bolognese sauce.",
-        "servings": 4,
-        "cooking_time": 30
+      "id": 1,
+      "img": "https://thecozycook.com/wp-content/uploads/2019/08/Bolognese-Sauce-480x270.jpg",
+      "title": "Spaghetti Bolognese",
+      "ingredients": [
+        "ground beef",
+        "onion",
+        "garlic",
+        "crushed tomatoes",
+        "spaghetti"
+      ],
+      "instructions": "1. In a large skillet, brown ground beef over medium heat. Drain any excess fat.\n2. Add diced onion and minced garlic to the skillet and sauté until softened.\n3. Stir in crushed tomatoes and bring to a simmer.\n4. Cook spaghetti according to package instructions.\n5. Serve spaghetti topped with bolognese sauce.",
+      "servings": 4,
+      "cooking_time": 30
     },
     {
-        "id": 2,
-        "title": "Fried Rice",
-        "img":"https://www.funfoodfrolic.com/wp-content/uploads/2021/10/Fried-Rice-Blog-Thumbnail-500x375.jpg",
-        "ingredients": [
-            "cooked rice",
-            "vegetable oil",
-            "onion",
-            "carrots",
-            "peas",
-            "eggs",
-            "soy sauce"
-        ],
-        "instructions": "1. Heat vegetable oil in a large skillet over medium heat.\n2. Add diced onion and diced carrots to the skillet and sauté until softened.\n3. Stir in peas, scrambled eggs, and cooked rice.\n4. Season with soy sauce to taste.\n5. Cook until heated through and serve.",
-        "servings": 4,
-        "cooking_time": 20
+      "id": 2,
+      "title": "Fried Rice",
+      "img": "https://www.funfoodfrolic.com/wp-content/uploads/2021/10/Fried-Rice-Blog-Thumbnail-500x375.jpg",
+      "ingredients": [
+        "cooked rice",
+        "vegetable oil",
+        "onion",
+        "carrots",
+        "peas",
+        "eggs",
+        "soy sauce"
+      ],
+      "instructions": "1. Heat vegetable oil in a large skillet over medium heat.\n2. Add diced onion and diced carrots to the skillet and sauté until softened.\n3. Stir in peas, scrambled eggs, and cooked rice.\n4. Season with soy sauce to taste.\n5. Cook until heated through and serve.",
+      "servings": 4,
+      "cooking_time": 20
     },
     {
-        "id": 3,
-        "title": "Pancakes",
-        "img":"https://thestayathomechef.com/wp-content/uploads/2019/01/Oatmeal-Pancakes-THUMBNAIL-2.jpg",
-        "ingredients": [
-            "all-purpose flour",
-            "baking powder",
-            "salt",
-            "sugar",
-            "milk",
-            "eggs",
-            "butter"
-        ],
-        "instructions": "1. In a large mixing bowl, whisk together flour, baking powder, salt, and sugar.\n2. In a separate mixing bowl, beat eggs and milk together.\n3. Stir the wet ingredients into the dry ingredients until just combined.\n4. Melt butter in a skillet over medium heat.\n5. Using a ladle, pour batter onto the skillet.\n6. Cook until bubbles appear on the surface, then flip and cook until golden brown.\n7. Serve with syrup.",
-        "servings": 4,
-        "cooking_time": 15
+      "id": 3,
+      "title": "Pancakes",
+      "img": "https://thestayathomechef.com/wp-content/uploads/2019/01/Oatmeal-Pancakes-THUMBNAIL-2.jpg",
+      "ingredients": [
+        "all-purpose flour",
+        "baking powder",
+        "salt",
+        "sugar",
+        "milk",
+        "eggs",
+        "butter"
+      ],
+      "instructions": "1. In a large mixing bowl, whisk together flour, baking powder, salt, and sugar.\n2. In a separate mixing bowl, beat eggs and milk together.\n3. Stir the wet ingredients into the dry ingredients until just combined.\n4. Melt butter in a skillet over medium heat.\n5. Using a ladle, pour batter onto the skillet.\n6. Cook until bubbles appear on the surface, then flip and cook until golden brown.\n7. Serve with syrup.",
+      "servings": 4,
+      "cooking_time": 15
     }
-],
-"savedrecipes":[]
-
+  ],
+  "savedrecipes": [
+    {
+      "id": 1,
+      "title": "Spaghetti Bolognese",
+      "img": "https://thecozycook.com/wp-content/uploads/2019/08/Bolognese-Sauce-480x270.jpg",
+      "ingredients": [
+        "ground beef",
+        "onion",
+        "garlic",
+        "crushed tomatoes",
+        "spaghetti"
+      ],
+      "instructions": "1. In a large skillet, brown ground beef over medium heat. Drain any excess fat.\n2. Add diced onion and minced garlic to the skillet and sauté until softened.\n3. Stir in crushed tomatoes and bring to a simmer.\n4. Cook spaghetti according to package instructions.\n5. Serve spaghetti topped with bolognese sauce.",
+      "servings": 4,
+      "cooking_time": 30
+    },
+    {
+      "id": 3,
+      "title": "Pancakes",
+      "img": "https://thestayathomechef.com/wp-content/uploads/2019/01/Oatmeal-Pancakes-THUMBNAIL-2.jpg",
+      "ingredients": [
+        "all-purpose flour",
+        "baking powder",
+        "salt",
+        "sugar",
+        "milk",
+        "eggs",
+        "butter"
+      ],
+      "instructions": "1. In a large mixing bowl, whisk together flour, baking powder, salt, and sugar.\n2. In a separate mixing bowl, beat eggs and milk together.\n3. Stir the wet ingredients into the dry ingredients until just combined.\n4. Melt butter in a skillet over medium heat.\n5. Using a ladle, pour batter onto the skillet.\n6. Cook until bubbles appear on the surface, then flip and cook until golden brown.\n7. Serve with syrup.",
+      "servings": 4,
+      "cooking_time": 15
+    }
+  ]
 }

@@ -5,10 +5,7 @@ import RecipeContainer from './RecipeContainer';
 
 
 function App() {
-
-
   
-
 const [data, setData] = useState([])
 
 useEffect(() =>{
