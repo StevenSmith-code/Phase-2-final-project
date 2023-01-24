@@ -36,7 +36,13 @@ function SavedRecipes() {
   return (
     <div className="h-[calc(100vh-80px)] flex items-center">
       <div className="w-11/12 h-[calc(100vh-80px)] mt-10 m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {renderSavedRecipes}
+        {recipes[0]?.length > 0 ? (
+          renderSavedRecipes
+        ) : (
+          <h1 className="text-xl text-center">
+            Add some recipes to your cookbook!
+          </h1>
+        )}
         {message}
       </div>
     </div>
