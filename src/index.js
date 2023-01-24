@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import NavBar from "./NavBar";
 import DetailedRecipe from "./DetailedRecipe";
 import SavedRecipes from "./SavedRecipes";
+import AddRecipe from "./AddRecipe";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,15 @@ const router = createBrowserRouter([
       <>
         <NavBar />
         <SavedRecipes />
+      </>
+    ),
+  },
+  {
+    path: "create",
+    element: (
+      <>
+        <NavBar />
+        <AddRecipe />
       </>
     ),
   },

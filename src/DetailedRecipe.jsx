@@ -59,9 +59,7 @@ function DetailedRecipe() {
       <div className="w-3/6 h-full m-auto flex flex-col items-center mt-10">
         <div className="bg-blue-200 h-4/5 w-full rounded-xl flex flex-col items-center">
           <h1 className="mt-5 text-2xl mb-3">Ingredients:</h1>
-          {ingredients.map((ingredient) => (
-            <li key={ingredient}>{ingredient}</li>
-          ))}
+          <pre>{ingredients}</pre>
           <h1 className="mt-5 mb-3 text-2xl">Recipe:</h1>
           <pre>{instructions}</pre>
           {!isSaved && (
