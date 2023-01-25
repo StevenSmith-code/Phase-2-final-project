@@ -42,7 +42,7 @@ function AddRecipe() {
   const handleSubmit = (e) => {
     e.preventDefault();
     let ingredients = state.ingredients.split("\n");
-    ingredients.map((ingredient) => state.ingredients);
+    // ingredients.map((ingredient) => state.ingredients);
     const recipe = { ...state, ingredients };
     console.log(recipe);
     dispatch({ type: "id", payload: recipes[0]?.length + 1 });
@@ -96,7 +96,8 @@ function AddRecipe() {
             id="grid-servings-name"
             type="number"
             placeholder="4"
-            max={8}
+            pattern="[0-9]{1,8}"
+            maxLength={8}
             value={state.servings}
             onChange={(e) =>
               dispatch({ type: "updateServings", payload: e.target.value })
@@ -123,7 +124,7 @@ function AddRecipe() {
             maxLength={500}
           />
           <p class="text-gray-600 text-xs italic">
-            Make sure to seperate by using ","
+            Make sure to seperate by pressing the enter key
           </p>
         </div>
       </div>
@@ -177,6 +178,7 @@ function AddRecipe() {
             id="grid-cook-time"
             type="number"
             placeholder="25"
+            maxLength={500}
             value={state.cooking_time}
             onChange={(e) =>
               dispatch({ type: "updateCookingTime", payload: e.target.value })

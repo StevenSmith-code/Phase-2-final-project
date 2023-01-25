@@ -35,7 +35,7 @@ function RecipeCard({
   return (
     <div
       onClick={handleClick}
-      className={`bg-gray-200 h-80 w-80 rounded-lg cursor-pointer hover:scale-110 transition duration-100 shadow-lg flex flex-col items-center`}
+      className={`bg-gray-200 h-80 w-80 items-center rounded-lg cursor-pointer hover:scale-110 transition duration-100 shadow-lg flex flex-col items-center`}
     >
       <img className="h-52 w-full p-2" src={img} alt="" />
       <h1 className="text-sm sm:text-base xl:text-xl">{title}</h1>
