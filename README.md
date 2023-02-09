@@ -31,22 +31,22 @@
 <br />
 <div align="center">
   <a href="https://github.com/StevenSmith-code/Phase-2-final-project">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <p>Check out the repo!</p>
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Phase 2 Final Project</h3>
 
   <p align="center">
-    project_description
+    This is a basic react SPA that implements React Router, TailwindCSS, and JSONDB for the backend.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/StevenSmith-code/Phase-2-final-project"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/StevenSmith-code/Phase-2-final-project">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/StevenSmith-code/Phase-2-final-project/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/StevenSmith-code/Phase-2-final-project/issues">Request Feature</a>
   </p>
 </div>
 
