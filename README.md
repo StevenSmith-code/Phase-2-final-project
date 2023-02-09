@@ -83,22 +83,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `StevenSmith-code`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,18 +112,13 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/StevenSmith-code/repo_name.git
+   git clone https://github.com/StevenSmith-code/Phase-2-final-project.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -152,12 +139,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [X] Render Recipes onto homepage
+- [X] Add form that caputres user input
+- [X] Create local database
+    - [X] Populated database with user input
 
-See the [open issues](https://github.com/StevenSmith-code/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/StevenSmith-code/Phase-2-final-project/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,9 +180,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/StevenSmith-code/repo_name](https://github.com/StevenSmith-code/repo_name)
+Project Link: [https://github.com/StevenSmith-code/Phase-2-final-project](https://github.com/StevenSmith-code/Phase-2-final-project)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -214,18 +199,18 @@ Project Link: [https://github.com/StevenSmith-code/repo_name](https://github.com
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/StevenSmith-code/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/StevenSmith-code/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/StevenSmith-code/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/StevenSmith-code/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/StevenSmith-code/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/StevenSmith-code/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/StevenSmith-code/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/StevenSmith-code/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/StevenSmith-code/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/StevenSmith-code/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/StevenSmith-code/Phase-2-final-project.svg?style=for-the-badge
+[contributors-url]: https://github.com/StevenSmith-code/Phase-2-final-project/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/StevenSmith-code/Phase-2-final-project.svg?style=for-the-badge
+[forks-url]: https://github.com/StevenSmith-code/Phase-2-final-project/network/members
+[stars-shield]: https://img.shields.io/github/stars/StevenSmith-code/Phase-2-final-project.svg?style=for-the-badge
+[stars-url]: https://github.com/StevenSmith-code/Phase-2-final-project/stargazers
+[issues-shield]: https://img.shields.io/github/issues/StevenSmith-code/Phase-2-final-project.svg?style=for-the-badge
+[issues-url]: https://github.com/StevenSmith-code/Phase-2-final-project/issues
+[license-shield]: https://img.shields.io/github/license/StevenSmith-code/Phase-2-final-project.svg?style=for-the-badge
+[license-url]: https://github.com/StevenSmith-code/Phase-2-final-project/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/steven-smith-b9aa4321b
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
