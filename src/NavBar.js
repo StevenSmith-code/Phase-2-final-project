@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 function NavBar() {
+  const [search, setSearch] = useState("");
+  const filterRequest = (e) => {
+    setTimeout(() => {}, 1000);
+  };
+
   return (
     <div className="h-20 bg-blue-500 flex items-center gap-x-20 px-20">
       <Link
@@ -21,6 +27,13 @@ function NavBar() {
       >
         My Recipes
       </Link>
+      <input
+        value={search}
+        type="text"
+        placeholder="Search for recipe..."
+        className="px-2 py-1 rounded-2xl focus:outline-none"
+        onChange={(e) => setSearch(e.target.value)}
+      />
     </div>
   );
 }

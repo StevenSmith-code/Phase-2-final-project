@@ -41,10 +41,6 @@ function AddRecipe() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    let ingredients = state.ingredients.split("\n");
-    // ingredients.map((ingredient) => state.ingredients);
-    const recipe = { ...state, ingredients };
-    console.log(recipe);
     dispatch({ type: "id", payload: recipes[0]?.length + 1 });
     fetch("http://localhost:3000/recipes", {
       method: "POST",
@@ -59,7 +55,6 @@ function AddRecipe() {
     fetch("http://localhost:3000/recipes")
       .then((res) => res.json())
       .then((data) => {
-        // dispatch({ type: "id", payload: data.length + 1 });
         recipes.push(data);
       });
   }, []);
