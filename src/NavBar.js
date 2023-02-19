@@ -1,12 +1,6 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
-function NavBar() {
-  const [search, setSearch] = useState("");
-  const filterRequest = (e) => {
-    setTimeout(() => {}, 1000);
-  };
-
+function NavBar({ search, setSearch }) {
   return (
     <div className="h-20 bg-blue-500 flex items-center gap-x-20 px-20">
       <Link
