@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import { useEffect } from "react";
+import { Navigate, redirect, useNavigate } from "react-router-dom";
 
 const initialState = {
   id: 0,
@@ -34,6 +35,7 @@ const reducer = (state, action) => {
 
 function AddRecipe() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const navigate = useNavigate();
   const recipes = [];
   const handleFileInput = (event) => {
     const file = event.target.files[0];
@@ -48,7 +50,9 @@ function AddRecipe() {
       body: JSON.stringify(state),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        navigate("/");
+      });
   };
 
   useEffect(() => {

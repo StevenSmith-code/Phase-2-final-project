@@ -25,7 +25,7 @@ function NavBar({ search, setSearch }) {
         value={search}
         type="text"
         placeholder="Search for recipe..."
-        className="px-2 py-1 rounded-2xl focus:outline-none"
+        className="px-2 py-1 rounded-2xl focus:outline-none w-80"
         onChange={(e) => setSearch(e.target.value)}
       />
     </div>
