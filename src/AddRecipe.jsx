@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import { useEffect } from "react";
-import { Navigate, redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
   id: 0,
@@ -28,6 +28,8 @@ const reducer = (state, action) => {
       return { ...state, img: URL.createObjectURL(action.payload) };
     case "updateCookingTime":
       return { ...state, cooking_time: action.payload };
+    case "addRecipe":
+      return initialState;
     default:
       return state;
   }
@@ -51,29 +53,24 @@ function AddRecipe() {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
+        dispatch({ type: "addRecipe" });
         navigate("/");
       });
   };
 
-  useEffect(() => {
-    fetch("http://localhost:3000/recipes")
-      .then((res) => res.json())
-      .then((data) => {
-        recipes.push(data);
-      });
-  }, []);
   return (
-    <form class="w-full max-w-lg m-auto mt-40" onSubmit={handleSubmit}>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+    <form className="w-full max-w-lg m-auto mt-40" onSubmit={handleSubmit}>
+      <div className="flex flex-wrap -mx-3 mb-6">
+        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             for="grid-recipe-name"
           >
             Recipe Name
           </label>
           <input
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             id="grid-recipe-name"
             type="text"
             placeholder="Mac and Cheese"
@@ -83,15 +80,15 @@ function AddRecipe() {
             }
           />
         </div>
-        <div class="w-full md:w-1/2 px-3">
+        <div className="w-full md:w-1/2 px-3">
           <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             for="grid-servings-name"
           >
             servings
           </label>
           <input
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="grid-servings-name"
             type="number"
             placeholder="4"
@@ -104,16 +101,16 @@ function AddRecipe() {
           />
         </div>
       </div>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
+      <div className="flex flex-wrap -mx-3 mb-6">
+        <div className="w-full px-3">
           <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             for="grid-ingredients"
           >
             ingredients
           </label>
           <textarea
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="grid-ingredients"
             type="text"
             value={state.ingredients}
@@ -122,22 +119,22 @@ function AddRecipe() {
             }
             maxLength={500}
           />
-          <p class="text-gray-600 text-xs italic">
+          <p className="text-gray-600 text-xs italic">
             Make sure to seperate by pressing the enter key
           </p>
         </div>
       </div>
-      <div class="flex flex-wrap -mx-3 mb-2">
-        <div class="w-full md:w-3/3 px-3 mb-6 md:mb-0">
+      <div className="flex flex-wrap -mx-3 mb-2">
+        <div className="w-full md:w-3/3 px-3 mb-6 md:mb-0">
           <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             for="grid-instructions"
           >
             instructions
           </label>
-          <div class="relative">
+          <div className="relative">
             <textarea
-              class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-instructions"
               value={state.instructions}
               onChange={(e) =>
@@ -147,33 +144,33 @@ function AddRecipe() {
                 })
               }
             ></textarea>
-            <p class="text-gray-600 text-xs italic">up to 500 characters</p>
+            <p className="text-gray-600 text-xs italic">up to 500 characters</p>
           </div>
         </div>
-        <div class="w-full md:w-2/3 px-3 mb-6 md:mb-0">
+        <div className="w-full md:w-2/3 px-3 mb-6 md:mb-0">
           <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             for="grid-img"
           >
             image
           </label>
           <input
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="grid-img"
             type="file"
             accept=".jpg, .jpeg, .png"
             onChange={handleFileInput}
           />
         </div>
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+        <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
           <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             for="grid-cook-time"
           >
             cook time
           </label>
           <input
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="grid-cook-time"
             type="number"
             placeholder="25"
