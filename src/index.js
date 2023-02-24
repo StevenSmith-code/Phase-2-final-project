@@ -43,6 +43,9 @@ const router = createBrowserRouter([
         <AddRecipe />
       </>
     ),
+    loader: async () => {
+      return fetch("http://localhost:3000/recipes");
+    },
   },
 ]);
 

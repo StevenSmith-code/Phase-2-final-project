@@ -1,6 +1,5 @@
-import React, { useReducer } from "react";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useReducer, useState } from "react";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const initialState = {
   id: 0,
@@ -36,9 +35,10 @@ const reducer = (state, action) => {
 };
 
 function AddRecipe() {
+  const dataList = useLoaderData();
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [recipes, setRecipes] = useState([...dataList]);
   const navigate = useNavigate();
-  const recipes = [];
   const handleFileInput = (event) => {
     const file = event.target.files[0];
     dispatch({ type: "updateImage", payload: file });
@@ -53,7 +53,7 @@ function AddRecipe() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        setRecipes((prevRecipes) => [...prevRecipes, data]);
         dispatch({ type: "addRecipe" });
         navigate("/");
       });
