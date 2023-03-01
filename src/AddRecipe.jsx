@@ -1,60 +1,45 @@
-import React, { useEffect, useReducer, useState } from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const initialState = {
-  id: 0,
-  title: "",
-  servings: "",
-  ingredients: "",
-  instructions: "",
-  cooking_time: "",
-  img: null,
-};
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "updateId":
-      return { ...state, id: action.payload };
-    case "updateRecipeName":
-      return { ...state, title: action.payload };
-    case "updateServings":
-      return { ...state, servings: action.payload };
-    case "updateIngredients":
-      return { ...state, ingredients: action.payload };
-    case "updateInstructions":
-      return { ...state, instructions: action.payload };
-    case "updateImage":
-      return { ...state, img: URL.createObjectURL(action.payload) };
-    case "updateCookingTime":
-      return { ...state, cooking_time: action.payload };
-    case "addRecipe":
-      return initialState;
-    default:
-      return state;
-  }
-};
-
-function AddRecipe() {
-  const dataList = useLoaderData();
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const [recipes, setRecipes] = useState([...dataList]);
+function AddRecipe({ recipes, setRecipes }) {
+  const [userRecipe, setUserRecipe] = useState({
+    id: 0,
+    title: "",
+    servings: "",
+    ingredients: "",
+    instructions: "",
+    cooking_time: "",
+    img: null,
+  });
   const navigate = useNavigate();
   const handleFileInput = (event) => {
     const file = event.target.files[0];
-    dispatch({ type: "updateImage", payload: file });
+    setUserRecipe((prevState) => ({
+      ...prevState,
+      img: URL.createObjectURL(file),
+    }));
+  };
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setUserRecipe((prevRecipe) => ({
+      ...prevRecipe,
+      [name]: value,
+    }));
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({ type: "id", payload: recipes[0]?.length + 1 });
+    setUserRecipe((prevState) => ({
+      ...prevState,
+      id: recipes[0]?.length + 1,
+    }));
     fetch("http://localhost:3000/recipes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(state),
+      body: JSON.stringify(userRecipe),
     })
       .then((res) => res.json())
       .then((data) => {
-        setRecipes((prevRecipes) => [...prevRecipes, data]);
-        dispatch({ type: "addRecipe" });
+        setRecipes([...recipes, data]);
         navigate("/");
       });
   };
@@ -74,10 +59,9 @@ function AddRecipe() {
             id="grid-recipe-name"
             type="text"
             placeholder="Mac and Cheese"
-            value={state.recipeName}
-            onChange={(e) =>
-              dispatch({ type: "updateRecipeName", payload: e.target.value })
-            }
+            value={userRecipe.title}
+            name="title"
+            onChange={handleChange}
           />
         </div>
         <div className="w-full md:w-1/2 px-3">
@@ -94,10 +78,9 @@ function AddRecipe() {
             placeholder="4"
             pattern="[0-9]{1,8}"
             maxLength={8}
-            value={state.servings}
-            onChange={(e) =>
-              dispatch({ type: "updateServings", payload: e.target.value })
-            }
+            name="servings"
+            value={userRecipe.servings}
+            onChange={handleChange}
           />
         </div>
       </div>
@@ -113,10 +96,9 @@ function AddRecipe() {
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="grid-ingredients"
             type="text"
-            value={state.ingredients}
-            onChange={(e) =>
-              dispatch({ type: "updateIngredients", payload: e.target.value })
-            }
+            name="ingredients"
+            value={userRecipe.ingredients}
+            onChange={handleChange}
             maxLength={500}
           />
           <p className="text-gray-600 text-xs italic">
@@ -136,13 +118,9 @@ function AddRecipe() {
             <textarea
               className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-instructions"
-              value={state.instructions}
-              onChange={(e) =>
-                dispatch({
-                  type: "updateInstructions",
-                  payload: e.target.value,
-                })
-              }
+              name="instructions"
+              value={userRecipe.instructions}
+              onChange={handleChange}
             ></textarea>
             <p className="text-gray-600 text-xs italic">up to 500 characters</p>
           </div>
@@ -175,10 +153,9 @@ function AddRecipe() {
             type="number"
             placeholder="25"
             maxLength={500}
-            value={state.cooking_time}
-            onChange={(e) =>
-              dispatch({ type: "updateCookingTime", payload: e.target.value })
-            }
+            name="cooking_time"
+            value={userRecipe.cooking_time}
+            onChange={handleChange}
           />
         </div>
         <button

@@ -40,7 +40,10 @@ function App() {
           element={<DetailedRecipe recipes={recipes} />}
         />
         <Route path="manage" element={<SavedRecipes />} />
-        <Route path="create" element={<AddRecipe />} />
+        <Route
+          path="create"
+          element={<AddRecipe recipes={recipes} setRecipes={setRecipes} />}
+        />
       </Routes>
     </div>
   );
