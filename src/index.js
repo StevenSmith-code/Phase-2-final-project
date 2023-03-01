@@ -1,60 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import NavBar from "./NavBar";
-import DetailedRecipe from "./DetailedRecipe";
-import SavedRecipes from "./SavedRecipes";
-import AddRecipe from "./AddRecipe";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "recipes/:id",
-    element: (
-      <>
-        <NavBar />
-        <DetailedRecipe />
-      </>
-    ),
-    loader: async ({ params }) => {
-      return fetch(`http://localhost:3000/recipes/${params.id}`);
-    },
-  },
-  {
-    path: "manage",
-    element: (
-      <>
-        <NavBar />
-        <SavedRecipes />
-      </>
-    ),
-  },
-  {
-    path: "create",
-    element: (
-      <>
-        <NavBar />
-        <AddRecipe />
-      </>
-    ),
-    loader: async () => {
-      return fetch("http://localhost:3000/recipes");
-    },
-  },
-]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}>
+    <BrowserRouter>
       <App />
-    </RouterProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

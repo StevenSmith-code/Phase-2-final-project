@@ -1,8 +1,8 @@
 import React from "react";
 import RecipeCard from "./RecipeCard";
 
-function RecipeContainer({ data }) {
-  const renderCards = data.map((recipe) => (
+function RecipeContainer({ recipes }) {
+  const renderCards = recipes.map((recipe) => (
     <RecipeCard
       key={recipe.id}
       id={recipe.id}

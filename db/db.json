@@ -28,15 +28,5 @@
       "cooking_time": 15
     }
   ],
-  "savedrecipes": [
-    {
-      "id": 2,
-      "title": "Fried Rice",
-      "img": "https://www.funfoodfrolic.com/wp-content/uploads/2021/10/Fried-Rice-Blog-Thumbnail-500x375.jpg",
-      "ingredients": "cooked rice\nvegetable oil\nonion\ncarrots\npeas\neggs\nsoy sauce",
-      "instructions": "1. Heat vegetable oil in a large skillet over medium heat.\n2. Add diced onion and diced carrots to the skillet and sauté until softened.\n3. Stir in peas, scrambled eggs, and cooked rice.\n4. Season with soy sauce to taste.\n5. Cook until heated through and serve.",
-      "servings": 4,
-      "cooking_time": 20
-    }
-  ]
+  "savedrecipes": []
 }

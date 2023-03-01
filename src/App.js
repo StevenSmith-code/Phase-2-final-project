@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import AddRecipe from "./AddRecipe";
 import "./App.css";
+import DetailedRecipe from "./DetailedRecipe";
 import NavBar from "./NavBar";
 import RecipeContainer from "./RecipeContainer";
+import SavedRecipes from "./SavedRecipes";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -26,7 +30,18 @@ function App() {
   return (
     <div className="App">
       <NavBar search={search} setSearch={setSearch} />
-      <RecipeContainer data={filteredRecipes} />
+      <Routes>
+        <Route
+          path="/"
+          element={<RecipeContainer recipes={filteredRecipes} />}
+        />
+        <Route
+          path="recipes/:recipeId"
+          element={<DetailedRecipe recipes={recipes} />}
+        />
+        <Route path="manage" element={<SavedRecipes />} />
+        <Route path="create" element={<AddRecipe />} />
+      </Routes>
     </div>
   );
 }
