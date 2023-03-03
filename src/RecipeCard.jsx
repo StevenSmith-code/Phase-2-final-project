@@ -21,16 +21,14 @@ function RecipeCard({
     e.stopPropagation();
     fetch(`http://localhost:3000/savedrecipes/${id}`, {
       method: "DELETE",
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(res.statusText);
-        }
-        setMessage("Recipe deleted successfully!");
-        onDelete(id);
-        setTimeout(() => setMessage(""), 3000);
-      })
-      .then((data) => console.log(data));
+    }).then((res) => {
+      if (!res.ok) {
+        throw new Error(res.statusText);
+      }
+      setMessage("Recipe deleted successfully!");
+      onDelete(id);
+      setTimeout(() => setMessage(""), 3000);
+    });
   };
   return (
     <div
