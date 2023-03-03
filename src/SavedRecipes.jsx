@@ -17,9 +17,9 @@ function SavedRecipes() {
     const updatedRecipes = recipes[0].filter((recipe) => recipe.id !== id);
     setRecipes([updatedRecipes]);
   };
-  const renderSavedRecipes = recipes[0]?.map((recipe, index) => (
+  const renderSavedRecipes = recipes[0]?.map((recipe) => (
     <RecipeCard
-      key={index}
+      key={recipe.id}
       id={recipe.id}
       title={recipe.title}
       ingredients={recipe.ingredients}
