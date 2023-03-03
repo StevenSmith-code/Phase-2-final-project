@@ -25,7 +25,7 @@ function DetailedRecipe({ recipes }) {
         body: JSON.stringify(detailedRecipe),
       })
         .then((res) => res.json())
-        .then((data) => {
+        .then(() => {
           setIsAdded(!isAdded);
           setIsSaved(!isSaved);
         })
